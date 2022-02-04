@@ -34,6 +34,7 @@ double Sum(const CompMap& v1);
 /// All nuclides with quantities below threshold will have their quantity set to
 /// zero.
 void ApplyThreshold(CompMap* v, double threshold);
+CompMap ApplyThreshold(const CompMap& v, double threshold);
 
 /// The sum of quantities of all nuclides of v is normalized to val.
 void Normalize(CompMap* v, double val = 1.0);

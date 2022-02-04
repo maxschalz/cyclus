@@ -42,6 +42,23 @@ double Sum(const CompMap& v) {
   return CycArithmetic::KahanSum(vec);
 }
 
+CompMap ApplyThreshold(const CompMap& v, double threshold) {
+  if (threshold < 0) {
+    std::stringstream ss;
+    ss << "The threshold cannot be negative. The value provided was '"
+       << threshold << "'.";
+    throw ValueError(ss.str());
+  }
+  CompMap cm;
+  CompMap::const_iterator it;
+  for (it = v.begin(); it != v.end(); ++it) {
+    if (std::abs(it->second) > threshold) {
+      cm[it->first] = it->second;
+    }
+  }
+  return cm;
+}
+
 void ApplyThreshold(CompMap* v, double threshold) {
   if (threshold < 0) {
     std::stringstream ss;

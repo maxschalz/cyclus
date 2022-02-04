@@ -82,7 +82,8 @@ Material::Ptr Material::ExtractComp(double qty, Composition::Ptr c,
     CompMap otherv(c->mass());
     compmath::Normalize(&otherv, qty);
     CompMap newv = compmath::Sub(v, otherv);
-    compmath::ApplyThreshold(&newv, threshold);
+    newv = compmath::ApplyThreshold(newv, threshold);
+    //compmath::ApplyThreshold(&newv, threshold);
     comp_ = Composition::CreateFromMass(newv);
   }
 
