@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 
 from nose.tools import assert_false, assert_true, assert_equal
 from numpy.testing import assert_array_equal

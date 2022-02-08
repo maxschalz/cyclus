@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 
 from nose.tools import assert_equal, assert_true
 from nose.plugins.skip import SkipTest

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """This module generates HDF5 backend code found in src/hdf5_back.cc
 
 There are 8 distinct code generation options, one of which must be passed

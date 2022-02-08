@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 """Collects & diffs public symobls in libcyclus.so. Used to ensure stability
 between versions. Now with 100% fewer vowels!
 
